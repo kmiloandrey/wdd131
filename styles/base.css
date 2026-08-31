@@ -31,20 +31,23 @@ body {
     line-height: 1.6;
     color: var(--text-main);
     background-color: var(--light-bg);
+    margin: 0;
+    padding: 0;
+
 }
 
 /* Header Elements */
 
 header {
-        background-color: var(--primary-color);
-        color: var(--light-bg);
-        text-align: center;
-        padding-top: 1.5rem;
-        /* Only pad the top and sides, NOT the bottom */
-        padding-bottom: 0;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        font-family: var(--font-heading);
+    background-color: var(--primary-color);
+    color: var(--light-bg);
+    text-align: center;
+    padding-top: 1.5rem;
+    /* Only pad the top and sides, NOT the bottom */
+    padding-bottom: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: var(--font-heading);
 }
 
 
