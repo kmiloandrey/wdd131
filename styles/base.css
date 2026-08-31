@@ -5,7 +5,7 @@
     /* Vibrant pink for footer icons/accents */
     --dark-bg: #2a2a2a;
     /* Dark gray for main nav/footer */
-    --light-bg: #f9f9f9;
+    --light-bg: #ffffff;
     /* Off-white page background */
     --card-border: #cccccc;
     /* Soft border line color */
@@ -58,6 +58,9 @@ h2 {
 }
 
 /* Nav flex */
+nav {
+    background-color: var(--dark-bg);
+}
 nav ul {
     display: flex;
     list-style: none;
@@ -85,8 +88,7 @@ nav a {
 
 /* Designed Hover Effect */
 nav a:hover {
-    background-color: var(--light-bg);
-    color: var(--dark-bg);
+    color: var(--primary-color);
     font-weight: 600;
 }
 
@@ -94,7 +96,7 @@ nav a:hover {
 
 main {
     max-width: 1200px;
-    margin: 2rem auto;
+    margin: rem auto;
     padding: 0 1.5rem;
 }
 
