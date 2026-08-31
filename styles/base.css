@@ -16,6 +16,7 @@
 
     --font-heading: "Inter", sans-serif;
     --font-body: "Lora", serif;
+
 }
 
 * {
@@ -99,7 +100,8 @@ main h1 {
     text-align: center;
     font-family: var(--font-heading);
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
     color: var(--text-main);
 }
 
@@ -158,6 +160,7 @@ main h1 {
     font-weight: 700;
     margin-bottom: 1.5rem;
     font-size: 1.25rem;
+    font-family: var(--font-heading);
 }
 
 .info-block {
