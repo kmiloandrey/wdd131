@@ -43,7 +43,6 @@ header {
     color: var(--light-bg);
     text-align: center;
     padding-top: 1.5rem;
-    /* Only pad the top and sides, NOT the bottom */
     padding-bottom: 0;
     padding-left: 1rem;
     padding-right: 1rem;
