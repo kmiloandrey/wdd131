@@ -36,16 +36,21 @@ body {
 /* Header Elements */
 
 header {
-    background-color: var(--primary-color);
-    color: var(--light-bg);
-    text-align: center;
-    padding: 1.5rem 1rem;
-    font-family: var(--font-heading);
+        background-color: var(--primary-color);
+        color: var(--light-bg);
+        text-align: center;
+        padding-top: 1.5rem;
+        /* Only pad the top and sides, NOT the bottom */
+        padding-bottom: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-family: var(--font-heading);
 }
 
 
 header span {
     display: block;
+    margin-bottom: 1.5rem;
 }
 
 h2 {
@@ -56,6 +61,8 @@ h2 {
 /* Nav flex */
 nav {
     background-color: var(--dark-bg);
+    margin-left: -1rem;
+    margin-right: -1rem;
 }
 
 nav ul {
