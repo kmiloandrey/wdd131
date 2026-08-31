@@ -1,18 +1,18 @@
 :root {
     --primary-color: #1b4d79;
-    /* Deep slate blue for headers/cards */
-    --accent-color: #e21b5a;
-    /* Vibrant pink for footer icons/accents */
+    /* Blue 1 */
+    --footer-color: #f2955f;
+    /* Orange */
     --dark-bg: #2a2a2a;
-    /* Dark gray for main nav/footer */
+    /* Dark gray background */
     --light-bg: #ffffff;
-    /* Off-white page background */
+    /* White background */
     --card-border: #cccccc;
-    /* Soft border line color */
+    /* Border line color */
     --text-main: #333333;
-    /* High-contrast charcoal text */
+    /* Text color */
     --text-link: #002288;
-    /* Professional link blue */
+    /* Blue 2*/
 
     --font-heading: "Inter", sans-serif;
     --font-body: "Lora", serif;
@@ -57,6 +57,7 @@ h2 {
 nav {
     background-color: var(--dark-bg);
 }
+
 nav ul {
     display: flex;
     list-style: none;
@@ -105,7 +106,7 @@ main h1 {
     color: var(--text-main);
 }
 
-/* 2-Column Responsive Grid Layout for cards */
+/* Grid Layout for cards */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
@@ -136,20 +137,20 @@ main h1 {
     padding: 1.5rem;
 }
 
-.intro-block {
+.intro {
     display: flex;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
     align-items: flex-start;
 }
 
-.intro-block p {
+.intro p {
     flex: 1;
 }
 
-.intro-block img {
+.intro img {
     flex: 1;
-    max-width: 130px;
+    max-width: 140px;
     height: auto;
     border: 1px solid var(--card-border);
     border-radius: 4px;
@@ -163,9 +164,9 @@ main h1 {
     font-family: var(--font-heading);
 }
 
-.info-block {
+.info {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     align-items: center;
 }
 
@@ -189,18 +190,18 @@ main h1 {
     margin-top: 0.5rem;
 }
 
-.info-block p {
+.info p {
     flex: 2;
 }
 
-/* Resources Card List styling */
+/* Resources List styling */
 .resources {
     list-style-type: disc;
     padding-left: 2rem;
 }
 
 .resources li {
-    margin-bottom: 0.6rem;
+    margin-bottom: 1rem;
     color: var(--text-link);
 }
 
@@ -227,17 +228,10 @@ footer {
 }
 
 footer p {
-    margin-bottom: 0.4rem;
+    margin-bottom: 1rem;
 }
 
-/* Keep and eye */
-footer p:last-child {
+footer #lastModified {
     margin-bottom: 0;
-    color: #ffd15c;
-    /* Soft contrasting tint for the dynamic date stamp */
-}
-
-.footer-accent {
-    color: var(--accent-color);
-    margin: 0 0.3rem;
+    color: var(--footer-color);
 }

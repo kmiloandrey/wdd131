@@ -7,17 +7,19 @@
     <title>WDD 131 | Dynamic Web Fundamentals | Camilo Valdivieso</title>
     <meta name="description" content="This is my Home page for WDD 131">
     <meta name="author" content="Camilo Valdivieso">
-    /*CSS folder*/
+    //CSS folder
     <link rel="stylesheet" href="styles/base.css">
-    /*font links*/
+    //font links
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Macondo&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    //JavaScript folder
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
@@ -44,21 +46,20 @@
                 <h2>About Me</h2>
 
                 <div class="card-content">
-                    <div class="intro-block">
-                        <p class="intro-block">My name is Camilo A Chinchilla Valdivieso. I am from Colombia and a
-                            student at BYU-Idaho studying Web Development.
+                    <div class="intro">
+                        <p class="intro">My name is Camilo A Chinchilla Valdivieso. I was born in Colombia and
+                            I live in Utah. I am a student at BYU-Idaho studying Web Development.
                             I am passionate about creating dynamic and engaging web experiences.</p>
                         <img src="images/profile.jpeg" alt="Profile Picture of Camilo Valdivieso" width="200"
-                            height="200" class="intro-block">
+                            height="200" class="intro">
                     </div>
                 </div>
 
                 <p class="country-name">Colombia</p>
 
-                <div class="info-block">
+                <div class="info">
                     <div class="flag">
-                        <img src="images/colombia-flag.jpeg" alt="Colombia Flag" width="200" height="100"
-                            class="flag-image">
+                        <img src="images/colombia-flag.jpeg" alt="Colombia Flag">
                         <span class="flag-caption">Colombia Flag</span>
                     </div>
                     <p>Colombia is a vibrant country in northwestern South America known for its incredible
@@ -88,13 +89,6 @@
         <p>&copy; <span id="currentyear"></span> ❖ Camilo Valdivieso ❖ Utah</p>
         <p id="lastModified"></p>
 
-        <script>
-            // Dynamically populate the current year
-            document.getElementById("currentyear").textContent = new Date().getFullYear();
-
-            // Dynamically populate the last modified date
-            document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
-        </script>
     </footer>
 </body>
 
