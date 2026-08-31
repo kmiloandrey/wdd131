@@ -89,7 +89,6 @@ nav a {
     text-decoration: none;
     font-family: var(--font-heading);
     font-size: 1.05rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Designed Hover Effect */
