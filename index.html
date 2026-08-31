@@ -4,10 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <title>WDD 131 | Dynamic Web Fundamentals | Camilo Valdivieso</title>
+    <meta name="description" content="This is my Home page for WDD 131">
+    <meta name="author" content="Camilo Valdivieso">
+    <link rel="stylesheet" href="styles/base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lora:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <header>
+        <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/camilo-andrey-chinchilla/?locale=en">LinkedIn</a></li>
+            <li><a href="https://byupw.instructure.com/">I-Learn</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/eph/5?lang=eng&id=p8#p8">Scripture</a></li>
+            <li><a href="final-project.html">Final Project</a></li>
+        </ul>
+    </nav>
+    
+
+    <main>
+        <h1>Camilo A Chinchilla Valdivieso</h1>
+
+        <div class="grid-container">
+
+            <section class="card">
+                <h2>About Me</h2>
+
+                <div class="card-content">
+                    <div class="intro-block">
+                        <p class="intro-block">My name is Camilo A Chinchilla Valdivieso. I am from Colombia and a student at BYU-Idaho studying Web Development.
+                    I am passionate about creating dynamic and engaging web experiences.</p>
+                    <img src="images/profile.jpeg" alt="Profile Picture of Camilo Valdivieso" width="200" height="200" class="intro-block">
+                    </div>
+                </div>
+
+                <p class="country-name">Colombia</p>
+
+                <div class="info-block">
+                    <div class="flag">
+                        <img src="images/colombia-flag.jpeg" alt="Colombia Flag" width="200" height="100" class="flag-image">
+                        <span class="flag-caption">Colombia Flag</span>
+                    </div>
+                    <p>Colombia is known for its incredible natural geography, outdoor recreation spaces, and thriving technology industry.
+                        The country features diverse desert environments and dramatic mountain ranges.</p>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Web Dev Resources</h2>
+                <div class="card-content">
+                    <p>Here are some of my favorite web development resources:</p>
+                    <ul class="resources">
+                        <li><a href="https://github.com/">GitHub</a></li>
+                        <li><a href="https://byui-cse.github.io/cse-ww-program/student/dev-standards.html">WDD Frontend Development Standards</a></li>
+                        <li><a href="https://fonts.google.com/">Google Fonts</a></li>
+                        <li><a href="https://video.byui.edu/media/t/1_b7w4k0v0">CSS Nav Menu</a></li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> ❖ Camilo Valdivieso ❖ Utah</p>
+        <p id="lastModified"></p>
+
+        <script>
+            // Dynamically populate the current year
+            document.getElementById("currentyear").textContent = new Date().getFullYear();
+
+            // Dynamically populate the last modified date
+            document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
+        </script>
+    </footer>
 </body>
 
 </html>

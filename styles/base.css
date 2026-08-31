@@ -1,0 +1,243 @@
+:root {
+    --primary-color: #1b4d79;
+    /* Deep slate blue for headers/cards */
+    --accent-color: #e21b5a;
+    /* Vibrant pink for footer icons/accents */
+    --dark-bg: #2a2a2a;
+    /* Dark gray for main nav/footer */
+    --light-bg: #f9f9f9;
+    /* Off-white page background */
+    --card-border: #cccccc;
+    /* Soft border line color */
+    --text-main: #333333;
+    /* High-contrast charcoal text */
+    --text-link: #002288;
+    /* Professional link blue */
+
+    --font-heading: 'Inter', sans-serif;
+    --font-body: 'Lora', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: var(--light-bg);
+}
+
+/* Header Elements */
+
+header {
+    background-color: var(--primary-color);
+    color: var(--light-bg);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-family: var(--font-heading);
+}
+
+header h1 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+header span {
+    display: block;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+/* Nav flex */
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    gap: 1rem;
+}
+
+nav li a {
+    flex: 1;
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    padding: 1rem 0;
+    color: var(--light-bg);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Designed Hover Effect */
+nav a:hover {
+    background-color: var(--light-bg);
+    color: var(--dark-bg);
+    font-weight: 600;
+}
+
+/* Main Content */
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+main h1 {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-main);
+}
+
+/* 2-Column Responsive Grid Layout for cards */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--light-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    background-color: var(--primary-color);
+    color: var(--light-bg);
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 1.15rem;
+}
+
+/* About Me Content Styles */
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.intro-block {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+}
+
+.intro-block p {
+    flex: 1;
+}
+
+.intro-block img {
+    flex: 1;
+    max-width: 130px;
+    height: auto;
+    border: 1px solid var(--card-border);
+    border-radius: 4px;
+}
+
+.country-name {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.info-block {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.flag {
+    flex: 1;
+    text-align: center;
+}
+
+.flag img {
+    max-width: 140px;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--card-border);
+}
+
+.flag-caption {
+    display: block;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--text-main);
+    margin-top: 0.5rem;
+}
+
+.info-block p {
+    flex: 2;
+}
+
+/* Resources Card List styling */
+.resources {
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+
+.resources li {
+    margin-bottom: 0.6rem;
+    color: var(--text-link);
+}
+
+.resources a {
+    color: var(--text-link);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.resources a:hover {
+    color: var(--primary-color);
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-bg);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin-bottom: 0.4rem;
+}
+
+/* Keep and eye */
+footer p:last-child {
+    margin-bottom: 0;
+    color: #ffd15c;
+    /* Soft contrasting tint for the dynamic date stamp */
+}
+
+.footer-accent {
+    color: var(--accent-color);
+    margin: 0 0.3rem;
+}
