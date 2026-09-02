@@ -1,13 +1,13 @@
 :root {
     --primary-color: #1b4d79;
     /* Blue 1 */
-    --footer-color: #d0c8cf;
+    --footer-color: white;
     /* Orange */
     --dark-bg: #2a2a2a;
     /* Dark gray background */
-    --light-bg: #ffffff;
-    /* White background */
-    --card-border: #cccccc;
+    --light-bg: #ede7e7;
+    /* Light gray background */
+    --card-border: #999595;
     /* Border line color */
     --text-main: #333333;
     /* Text color */
