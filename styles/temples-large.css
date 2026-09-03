@@ -1,0 +1,35 @@
+@media (min-width: 768px) {
+
+    /* Hide Mobile Hamburger Button */
+    #menu {
+        display: none;
+    }
+
+    /* Reset Navigation Layout for Desktop Screen widths */
+    nav {
+        display: block !important;
+        position: static;
+        width: auto;
+        background: none;
+    }
+
+    .navigation {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .navigation li a {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+    }
+
+    /* Transform Album stack into 3-Column Desktop Grid Layout */
+    .album-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    main h1 {
+        font-size: 2.2rem;
+    }
+}
