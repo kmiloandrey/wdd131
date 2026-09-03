@@ -7,7 +7,7 @@
 
     /* Reset Navigation Layout for Desktop Screen widths */
     nav {
-        display: block !important;
+        display: block;
         position: static;
         width: auto;
         background: none;
@@ -15,7 +15,7 @@
 
     .navigation {
         display: flex;
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
     .navigation li a {

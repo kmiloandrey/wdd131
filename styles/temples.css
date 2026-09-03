@@ -1,11 +1,11 @@
 /* Setup colors */
 :root {
-    --primary-color: #4e18a6;
+    --primary-color: #3e1383;
     /* Purple header/footer background */
     --text-light: white;
     --text-dark: black;
-    --text-accent: #a66ae2;
-    --bg-light: #f6eeee;
+    --text-accent: #4e18a6;
+    --bg-light: #e1d0e6;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     color: var(--text-dark);
-    
+
 }
 
 /* Header Design */
@@ -27,7 +27,7 @@ header {
     position: relative;
 }
 
-#temple-album {
+#temple-album-container {
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -47,7 +47,7 @@ header {
 }
 
 #menu.open::before {
-    content: "❌";
+    content: "x";
     /* Close symbol when active */
 }
 
@@ -90,7 +90,7 @@ nav.show {
 /* Main Layout & Typography */
 main {
     padding: 1rem;
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -103,9 +103,9 @@ main h1 {
 /* Album Image Grid Stack */
 .album-container {
     display: grid;
-    grid-template-columns: 1fr;
-    /* Single column stack on mobile */
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
 }
 
 figure {
@@ -113,6 +113,7 @@ figure {
     background-color: var(--bg-light);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    flex-direction: column;
 }
 
 figure img {
@@ -122,9 +123,17 @@ figure img {
 }
 
 figcaption {
-    padding: 0.8rem;
-    font-weight: 500;
+    padding: 1rem 0;
+    font-size: 1rem;
+    font-weight: 400;
     color: var(--text-accent);
+    margin-top: auto;
+}
+
+figure:hover {
+    transform: translateY(-5px);
+    /* Makes the card lift up slightly when hovered */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Footer Styling */
