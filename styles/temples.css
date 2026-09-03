@@ -54,7 +54,6 @@ header {
 /* Mobile Responsive Navigation Links */
 nav {
     display: none;
-    /* Hidden by default on mobile */
     position: absolute;
     top: 100%;
     left: 0;
@@ -64,7 +63,8 @@ nav {
 }
 
 nav.show {
-    display: block;
+    display: flex;
+    flex-direction: column;
     /* Shown when hamburger icon is clicked */
 }
 
@@ -72,6 +72,7 @@ nav.show {
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 .navigation li a {

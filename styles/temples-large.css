@@ -7,10 +7,11 @@
 
     /* Reset Navigation Layout for Desktop Screen widths */
     nav {
-        display: block;
+        display: flex;
         position: static;
         width: auto;
         background: none;
+        align-items: center;
     }
 
     .navigation {
