@@ -133,7 +133,6 @@ figcaption {
 
 figure:hover {
     transform: translateY(-5px);
-    /* Makes the card lift up slightly when hovered */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
