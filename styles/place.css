@@ -54,11 +54,6 @@ footer {
     /* Adds nice space around the symbol */
 }
 
-/* This removes the very last diamond symbol */
-.footer-divider:last-of-type::after {
-    content: "";
-}
-
 /* Hero Img and Layout Container */
 
 .hero {
