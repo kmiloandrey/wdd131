@@ -4,24 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD131 | Country | Camilo Valdivieso</title>
+    <title>WDD131 | Utah | Camilo Valdivieso</title>
     <meta name="description"
-        content="This is my Country page for WDD 131 web development course. It includes information about the country.">
+        content="This is the State of Utah page for WDD 131 web development course. It includes information about the state.">
     <meta name="author" content="Camilo Valdivieso">
     <!--CSS folder-->
     <link rel="stylesheet" href="styles/place.css">
     <!--JavaScript  links-->
-    <script src="scripts/place.js"></script>
+    <script src="scripts/place.js" defer></script>
     <!--font  links-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Macondo&family=Roboto:ital,wght@0,100..900;1,100..900&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Macondo&family=Roboto:ital,wght@0,100..900;1,100..900&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
+    <header>
+        <h1>Utah</h1>
+    </header>
 
+    <main>
+        <div class="hero">
+            <picture>
+                <!-- For large desktop screens -->
+                <source srcset="images/arche_large.webp" media="(min-width: 1000px)">
+                <!-- For tablet/medium screens -->
+                <source srcset="images/arche_medium.webp" media="(min-width: 600px)">
+                <!-- For small mobile devices -->
+                <img src="images/bryce_canyon.webp" alt="Bryce Canyon, Utah" class="hero-img">
+            </picture>
+
+            <!-- Keep ONLY this one container for your data and weather boxes -->
+            <div class="panels-overlay">
+
+                <!-- DATA PANEL BOX SECTION -->
+                <section class="info-card panel-data">
+                    <div class="card-header">Data</div>
+                    <div class="card-content">
+                        <div class="info-row"><span class="label">Area:</span> <span class="value">84,900 sq km</span>
+                        </div>
+                        <div class="info-row"><span class="label">Population:</span> <span class="value">3.55 million
+                                people</span></div>
+                        <div class="info-row"><span class="label">Capital:</span> <span class="value">Salt Lake
+                                City</span>
+                        </div>
+                        <div class="info-row"><span class="label">Languages:</span> <span class="value">English,
+                                Spanish</span></div>
+                        <div class="info-row"><span class="label">Currency:</span> <span class="value">US Dollar</span>
+                        </div>
+                        <div class="info-row"><span class="label">Time Zone:</span> <span class="value">GMT-6</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- WEATHER PANEL BOX SECTION -->
+                <section class="info-card panel-weather">
+                    <div class="card-header">
+                        <span>Weather</span>
+                        <img src="SVG/cloud-sun.svg" alt="Cloud and Sun Icon" class="mini-weather-icon">
+                    </div>
+                    <div class="card-content">
+                        <div class="weather-center-icon">
+                            <img src="SVG/cloud-sun.svg" alt="Cloud and Sun Icon" class="large-weather-icon">
+                        </div>
+                        <div class="info-row"><span class="label">Temperature:</span> <span class="value">79 °F</span>
+                        </div>
+                        <div class="info-row"><span class="label">Conditions:</span> <span class="value">Sunny</span>
+                        </div>
+                        <div class="info-row"><span class="label">Wind:</span> <span class="value">7 mph</span></div>
+                        <div class="info-row"><span class="label">Humidity:</span> <span class="value">23%</span></div>
+                    </div>
+                </section>
+
+            </div> <!-- /panels-overlay -->
+        </div> <!-- /hero -->
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> ❖ Camilo Valdivieso ❖ Utah</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 
 </html>

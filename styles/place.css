@@ -1,0 +1,189 @@
+/* Setup colors */
+:root {
+    --primary-color: #3698bc;
+    --secondary-color: #207a96;
+    --text-light: white;
+    --text-dark: black;
+    --bg-small: #d8a871;
+    --bg-light: #686975;
+    
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Comic Relief", system-ui;
+    background-color: var(--bg-small);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header and Footer*/
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+footer {
+    background-color: #e79c6b;
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Hero Img and Layout Container */
+
+   .hero {
+    position: relative;
+    width: 100%;
+}
+
+
+.hero picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Mobile View */
+
+.panels-overlay {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.info-card {
+    background-color: var(--text-light);
+    border: 1px solid var(--bg-light);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 0.75rem 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-content {
+    padding: 1.2rem;
+}
+
+ /* Data Row Layout */
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--bg-light);
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.label {
+    font-weight: bold;
+    color: var(--bg-light);
+}
+
+.value {
+    color: var(--text-dark);
+}
+
+/* Weather Icons */
+.mini-weather-icon {
+    display: none;
+    /* Hidden on mobile header, shown on desktop */
+    width: 24px;
+    height: 24px;
+}
+
+.weather-center-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.large-weather-icon {
+    width: 80px;
+    height: auto;
+    margin: 0.5rem 0;
+}
+
+/*  Media view  */
+@media (min-width: 800px) {
+    .hero picture img {
+        height: 550px;
+    }
+
+    
+    .panels-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 2.5rem;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        pointer-events: none;
+       
+    }
+
+    .info-card {
+        pointer-events: auto;
+        width: 320px;
+        background-color: var(--text-light);
+    }
+
+    /* Target specific card placements to match sample image layout */
+    .panel-data {
+        align-self: flex-start;
+        margin-top: 1rem;
+    }
+
+    .panel-weather {
+        align-self: flex-end;
+        margin-top: auto;
+        margin-bottom: 1rem;
+    }
+
+    .mini-weather-icon {
+        display: block;
+    }
+
+    .weather-center-icon {
+        display: none;
+    }
+}
+
