@@ -21,4 +21,3 @@ if (temperature <= 50 && windSpeed > 3) {
     // Target the new HTML ID to show N/A
     document.getElementById("wind-chill").textContent = "N/A";
 }
-}
