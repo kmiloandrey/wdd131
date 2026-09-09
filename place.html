@@ -28,12 +28,13 @@
     <main>
         <div class="hero">
             <picture>
-                <!-- For large desktop screens -->
+                <!-- Large desktop screens -->
                 <source srcset="images/arche_large.webp" media="(min-width: 1000px)">
-                <!-- For tablet/medium screens -->
+                <!-- Tablet screens -->
                 <source srcset="images/arche_medium.webp" media="(min-width: 600px)">
-                <!-- For small mobile devices -->
-                <img src="images/bryce_canyon.webp" alt="Bryce Canyon, Utah" class="hero-img" width="500" height="250">
+                <!-- Mobile fallback / Default source -->
+                <img src="images/bryce_canyon.webp" alt="Bryce Canyon, Utah" class="hero-img" loading="eager" width="500"
+                    height="250">
             </picture>
 
             <!-- Container for data and weather boxes -->
@@ -62,7 +63,7 @@
                 <section class="info-card panel-weather">
                     <div class="card-header">
                         <span>Weather</span>
-                        <img src="SVG/cloud-sun.svg" alt="Cloud and Sun Icon" class="mini-weather-icon" width="24" height="24">
+                        <img src="SVG/cloud-sun.svg" alt="Cloud and Sun" class="mini-weather-icon" width="24" height="24">
                     </div>
                     <div class="card-content">
                         <div class="weather-center-icon">
