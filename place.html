@@ -33,13 +33,13 @@
                 <!-- For tablet/medium screens -->
                 <source srcset="images/arche_medium.webp" media="(min-width: 600px)">
                 <!-- For small mobile devices -->
-                <img src="images/bryce_canyon.webp" alt="Bryce Canyon, Utah" class="hero-img">
+                <img src="images/bryce_canyon.webp" alt="Bryce Canyon, Utah" class="hero-img" width="500" height="250">
             </picture>
 
-            <!-- Keep ONLY this one container for your data and weather boxes -->
+            <!-- Container for data and weather boxes -->
             <div class="panels-overlay">
 
-                <!-- DATA PANEL BOX SECTION -->
+                <!-- Data Panel box -->
                 <section class="info-card panel-data">
                     <div class="card-header">Data</div>
                     <div class="card-content">
@@ -59,27 +59,30 @@
                     </div>
                 </section>
 
-                <!-- WEATHER PANEL BOX SECTION -->
+                <!-- Weather Panel Box -->
                 <section class="info-card panel-weather">
                     <div class="card-header">
                         <span>Weather</span>
-                        <img src="SVG/cloud-sun.svg" alt="Cloud and Sun Icon" class="mini-weather-icon">
+                        <img src="SVG/cloud-sun.svg" alt="Cloud and Sun Icon" class="mini-weather-icon" width="24"
+                            height="24">
                     </div>
                     <div class="card-content">
                         <div class="weather-center-icon">
-                            <img src="SVG/cloud-sun.svg" alt="Cloud and Sun Icon" class="large-weather-icon">
+                            <img src="SVG/cloud-sun.svg" alt="Cloud and Sun Icon" class="large-weather-icon" width="80"
+                                height="80">
                         </div>
                         <div class="info-row"><span class="label">Temperature:</span> <span class="value">79 °F</span>
                         </div>
                         <div class="info-row"><span class="label">Conditions:</span> <span class="value">Sunny</span>
                         </div>
                         <div class="info-row"><span class="label">Wind:</span> <span class="value">7 mph</span></div>
-                        <div class="info-row"><span class="label">Humidity:</span> <span class="value">23%</span></div>
+                        <div class="info-row"><span class="label">Wind Chill:</span> <span class="value" id="wind-chill">N/A</span></div>
+                        </div>
                     </div>
                 </section>
 
-            </div> <!-- /panels-overlay -->
-        </div> <!-- /hero -->
+            </div> 
+        </div> 
     </main>
 
     <footer>
