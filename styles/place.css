@@ -168,7 +168,6 @@ footer {
     }
 
     .info-card {
-        pointer-events: auto;
         width: 320px;
         background-color: var(--text-light);
     }
