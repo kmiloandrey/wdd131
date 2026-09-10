@@ -18,6 +18,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Macondo&family=Roboto:ital,wght@0,100..900;1,100..900&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+        <!--preload-->
+    <link rel="preload" as="image" href="images/bryce_canyon_small.webp" media="(max-width: 599px)">
 </head>
 
 <body>
@@ -27,15 +29,14 @@
 
     <main>
         <div class="hero">
-            <picture>
-                <!-- Large desktop screens -->
-                <source srcset="images/arche_large.webp" media="(min-width: 1000px)">
-                <!-- Tablet screens -->
-                <source srcset="images/arche_medium.webp" media="(min-width: 600px)">
-                <!-- Mobile fallback / Default source -->
-                <img src="images/bryce_canyon_small.webp" alt="Bryce Canyon, Utah" class="hero-img" width="500"
-                    height="250">
-            </picture>
+        <picture>
+            <!-- Large desktop screens -->
+            <source srcset="images/arche_large.webp" media="(min-width: 1000px)" width="1200" height="550">
+            <!-- Medium screens -->
+            <source srcset="images/arche_medium.webp" media="(min-width: 600px)" width="800" height="400">
+            <!-- Small screens -->
+            <img src="images/bryce_canyon_small.webp" alt="Bryce Canyon, Utah" class="hero-img" width="500" height="250">
+        </picture>
 
             <!-- Container for data and weather boxes -->
             <div class="panels-overlay">
