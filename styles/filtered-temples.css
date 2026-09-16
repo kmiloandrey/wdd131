@@ -1,0 +1,160 @@
+/* Setup colors */
+:root {
+    --primary-color: #3e1383;
+    /* Purple header/footer background */
+    --text-light: white;
+    --text-dark: black;
+    --text-accent: #4e18a6;
+    --bg-light: #e1d0e6;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-dark);
+
+}
+
+/* Header Design */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+}
+
+#temple-grid-container {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Mobile Hamburger Button */
+#menu {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰";
+    /* Standard hamburger symbol */
+}
+
+#menu.open::before {
+    content: "x";
+    /* Close symbol when active */
+}
+
+/* Mobile Responsive Navigation Links */
+nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    z-index: 10;
+}
+
+nav.show {
+    display: flex;
+    flex-direction: column;
+    /* Shown when hamburger icon is clicked */
+}
+
+.navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.navigation li a {
+    display: block;
+    padding: 1rem;
+    color: var(--text-light);
+    text-decoration: none;
+    text-align: center;
+}
+
+.navigation li a:hover,
+.navigation li a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main Layout & Typography */
+main {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Album Image Grid Stack */
+.temple-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.temple-grid img {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    /* Keeps the temple looking perfectly sharp and undistorted */
+    display: block;
+    /* Removes extra spacing underneath images */
+}
+
+figure {
+    margin: 0;
+    background-color: var(--bg-light);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex-direction: column;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    padding: 1rem 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-accent);
+    margin-top: auto;
+}
+
+figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.4rem 0;
+}
