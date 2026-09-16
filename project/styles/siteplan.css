@@ -1,0 +1,17 @@
+/* Setup colors */
+:root {
+    --primary-color: #3e1383;
+    /* Purple header/footer background */
+    --text-light: white;
+    --text-dark: black;
+    --text-accent: #4e18a6;
+    --bg-light: #e1d0e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Comic Relief", system-ui;
+}
