@@ -11,7 +11,235 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    /* Makes padding and widths easier to manage */
 }
+
 body {
     font-family: "Comic Relief", system-ui;
+    background-color: #f9f6fa;
+    /* Light tint background for the whole page */
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Keeps footer at the bottom of the page */
+}
+
+/* --- Header & Navigation Styling --- */
+header {
+    background-color: var(--primary-color);
+    /* Updated to purple */
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    /* Centers the menu items horizontally */
+    gap: 2.5rem;
+    /* Space between navigation links */
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-light);
+    /* Changed to white for readability on purple */
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--bg-light);
+    /* Lights up pale purple on hover */
+}
+
+/* --- Main Content Area --- */
+main {
+    flex: 1;
+    /* Pushes footer down if there is little content */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    /* Centers the content on the screen */
+    padding: 2rem 1rem;
+}
+
+/* --- Hero Section Layering --- */
+.hero-container {
+    position: relative;
+    /* Acts as an anchor for the absolute layers inside */
+    width: 100%;
+    margin-bottom: 3rem;
+    /* Space between hero image and scenarios */
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.hero-bg {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Floating Title Ribbon */
+.hero-title-box {
+    position: absolute;
+    top: 4%;
+    /* Places it near the top of the photo */
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-light);
+    opacity: 0.6;
+    /* Semi-transparent dark overlay */
+    padding: 0.75rem 0;
+    text-align: center;
+}
+
+.hero-title-box h1 {
+    color: var(--text-accent);
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+/* Floating Bottom Banner Box */
+.hero-banner {
+    position: absolute;
+    bottom: 5%;
+    /* Places it near the bottom of the photo */
+    left: 5%;
+    right: 5%;
+    background-color: var(--bg-light);
+    opacity: 0.6;
+    border-radius: 12px;
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    /* Pushes text to left, thumbnail to right */
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-banner p {
+    font-size: 1.2rem;
+    color: var(--text-accent);
+    font-weight: bold;
+    padding-right: 1rem;
+}
+
+.hero-banner img {
+    width: 140px;
+    /* Dimensions for the family hiking thumbnail */
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* --- Target Audience Scenarios --- */
+.scenarios {
+    text-align: center;
+}
+
+.scenarios h2 {
+    color: var(--text-accent);
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.scenarios>p {
+    margin-bottom: 2rem;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* Layout for the Question Cards */
+.cards-container {
+    display: flex;
+    gap: 1.5rem;
+    /* Gap between cards */
+    flex-wrap: wrap;
+    /* Wraps cards on small mobile screens */
+    justify-content: center;
+}
+
+/* Individual Card Styling */
+.question-card {
+    background-color: var(--bg-light);
+    border: 2px solid var(--text-accent);
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 1.5rem;
+    flex: 1;
+    min-width: 280px;
+    /* Keeps cards from getting too squished */
+    max-width: 450px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+    transition: transform 0.2s ease;
+    /* Smooth hover effect */
+}
+
+.question-card:hover {
+    transform: translateY(-5px);
+    /* Lift card slightly when hovered */
+}
+
+.question-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+}
+
+.question-card p {
+    line-height: 1.5;
+}
+
+/* --- Footer Styling --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+.footer-divider {
+    margin-right: 15px;
+    border-right: 1px solid var(--bg-light);
+    padding-right: 15px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 650px) {
+    .hero-title-box h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-banner {
+        flex-direction: column;
+        /* Stacks text and thumbnail vertically on mobile */
+        text-align: center;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    .hero-banner p {
+        padding-right: 0;
+        font-size: 1rem;
+    }
+
+    .hero-banner img {
+        width: 120px;
+        height: 75px;
+    }
+
+    nav ul {
+        gap: 1.25rem;
+    }
 }
