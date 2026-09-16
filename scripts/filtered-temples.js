@@ -154,10 +154,10 @@ navLinks.forEach(link => {
             filteredTemples = temples.filter(temple => getYear(temple.dedicated) < 1900);
         }
         else if (filterCriteria === "new") {
-            filteredTemples = temples.filter(temple => getYear(temple.dedicated) > 2019);
+            filteredTemples = temples.filter(temple => getYear(temple.dedicated) > 2000);
         }
         else if (filterCriteria === "large") {
-            filteredTemples = temples.filter(temple => temple.area > 150000);
+            filteredTemples = temples.filter(temple => temple.area > 90000);
         }
         else if (filterCriteria === "small") {
             filteredTemples = temples.filter(temple => temple.area < 10000);
