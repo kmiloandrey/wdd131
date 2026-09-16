@@ -91,7 +91,7 @@ nav.show {
 /* Main Layout & Typography */
 main {
     padding: 1rem;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -99,6 +99,7 @@ main h1 {
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+    color: var(--primary-color);
 }
 
 /* Album Image Grid Stack */
@@ -121,9 +122,13 @@ main h1 {
 figure {
     margin: 0;
     background-color: var(--bg-light);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth hover transition animation */
 }
 
 figure img {
@@ -133,11 +138,31 @@ figure img {
 }
 
 figcaption {
-    padding: 1rem 0;
-    font-size: 1rem;
-    font-weight: 400;
+    padding: 1.2rem;
+    text-align: left;
+}
+
+figcaption h2 {
+    margin: 0 0 0.8rem 0;
+    font-size: 1.3rem;
     color: var(--text-accent);
-    margin-top: auto;
+    font-family: 'Lora', serif;
+    /* Uses your imported elegant accent font */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 4px;
+}
+
+figcaption p {
+    margin: 0.4rem 0;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+figcaption p span {
+    font-weight: bold;
+    color: var(--primary-color);
+    /* Matches your signature purple theme color */
 }
 
 figure:hover {

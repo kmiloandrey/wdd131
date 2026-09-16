@@ -101,9 +101,9 @@ const temples = [
 const templeGrid = document.querySelector("div.temple-grid");
 const navLinks = document.querySelectorAll("nav a"); // Targets all navigation menu link items
 
-// 2. Your existing function to build and render the cards
+
 function createTempleCards(templesList) {
-    templeGrid.innerHTML = ""; // Clear existing grid cards
+    templeGrid.innerHTML = ""; 
 
     templesList.forEach((temple) => {
         let card = document.createElement("section");
@@ -134,22 +134,22 @@ function createTempleCards(templesList) {
     });
 }
 
-// 3. Helper function to extract the four-digit year from the dedication string
+//  function to extract the four-digit year from the dedication string
 function getYear(dateString) {
     // Splits "2023, August, 13" into an array and grabs the first element "2023"
     return parseInt(dateString.split(",")[0].trim());
 }
 
-// 4. Set up event handling for the navigation menu options
+// set up event handling for the navigation menu options
 navLinks.forEach(link => {
     link.addEventListener("click", (event) => {
-        event.preventDefault(); // Prevents the page from refreshing when clicking links
+        event.preventDefault(); 
 
         // Grab the text content of the link clicked (e.g., "Old", "New", "Large")
-        const filterCriteria = link.textContent.trim();
+        const filterCriteria = link.textContent.trim().toLowerCase(); // Convert to lowercase for easier comparison
         let filteredTemples = [];
 
-        // Apply filters based on your project rules
+        // filters based on your project rules
         if (filterCriteria === "old") {
             filteredTemples = temples.filter(temple => getYear(temple.dedicated) < 1900);
         }
@@ -163,7 +163,7 @@ navLinks.forEach(link => {
             filteredTemples = temples.filter(temple => temple.area < 10000);
         }
         else if (filterCriteria === "home") {
-            filteredTemples = temples; // Show everything
+            filteredTemples = temples;
         }
 
         // Render the filtered array to the screen
