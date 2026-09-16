@@ -150,19 +150,19 @@ navLinks.forEach(link => {
         let filteredTemples = [];
 
         // Apply filters based on your project rules
-        if (filterCriteria === "Old") {
+        if (filterCriteria === "old") {
             filteredTemples = temples.filter(temple => getYear(temple.dedicated) < 1900);
         }
-        else if (filterCriteria === "New") {
+        else if (filterCriteria === "new") {
             filteredTemples = temples.filter(temple => getYear(temple.dedicated) > 2019);
         }
-        else if (filterCriteria === "Large") {
+        else if (filterCriteria === "large") {
             filteredTemples = temples.filter(temple => temple.area > 150000);
         }
-        else if (filterCriteria === "Small") {
+        else if (filterCriteria === "small") {
             filteredTemples = temples.filter(temple => temple.area < 10000);
         }
-        else if (filterCriteria === "Home") {
+        else if (filterCriteria === "home") {
             filteredTemples = temples; // Show everything
         }
 
