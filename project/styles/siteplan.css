@@ -4,8 +4,8 @@
     /* Purple header/footer background */
     --text-light: white;
     --text-dark: black;
-    --text-accent: #4e18a6;
-    --bg-light: #e1d0e6;
+    --text-accent: #2c0066;
+    --bg-light: #f4eef7;
     --background-color: #ecdff0;
 }
 
@@ -145,7 +145,7 @@ main {
 
 .scenarios>p {
     margin-bottom: 2rem;
-    color: #555;
+    color: var(--text-dark);
     font-size: 1.1rem;
 }
 
