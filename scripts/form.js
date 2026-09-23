@@ -14,24 +14,17 @@ const products = [
 ];
 
 // Populate product array into select element on the primary form
-const productSelect = document.getElementById("product-name");
+const selectElement = document.getElementById("product-name");
 
-if (productSelect) {
+if (selectElement) {
     products.forEach(product => {
         const option = document.createElement("option");
-        // Specifications: option array value field is 'id', display field is 'name'
         option.value = product.id;
-        option.textContent = product.name;
-        productSelect.appendChild(option);
+        // Capitalize the first letter of each word for a polished UI look
+        option.textContent = product.name.split(' ')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
+
+        selectElement.appendChild(option);
     });
-}
-
-// LocalStorage Tracking logic for review.html completion counter
-if (window.location.pathname.includes("review.html")) {
-    let reviewCount = localStorage.getItem("reviewCount") || 0;
-    reviewCount = parseInt(reviewCount) + 1;
-    localStorage.setItem("reviewCount", reviewCount);
-
-    // Optional: display counter somewhere on review.html page if you choose
-    console.log(`Total Reviews Completed: ${reviewCount}`);
 }
