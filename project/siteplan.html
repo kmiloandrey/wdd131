@@ -18,9 +18,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Macondo&family=Roboto:ital,wght@0,100..900;1,100..900&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Macondo&family=Roboto:ital,wght@0,100..900;1,100..900&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="wireframe-mode">
     <header>
         <nav class="flex">
             <ul>
@@ -34,7 +36,7 @@
     <!-- Everything goes inside this single main tag -->
     <main>
         <!-- HERO SECTION -->
-        <div class="hero-container">
+        <div class="hero-container wireframe-placeholder">
             <img src="images/moab_sunset.webp" alt="Moab Sunset" class="hero-bg" />
 
             <div class="hero-title-box">
@@ -46,6 +48,48 @@
                 <img src="images/family.hiking.webp" alt="Family Hiking" />
             </article>
         </div>
+
+        <!-- COLOR SCHEME SECTION -->
+        <section class="siteplan-section">
+            <h2>Color Scheme</h2>
+            <p>The chosen colors reflect the vibrant sunsets, deep canyons, and outdoor spirit of Utah:</p>
+            <div class="color-palette">
+                <div class="color-box primary-box"><strong>Primary Color:</strong> #3e1383 (Used for Navigation, Headers, and
+                    Footer backgrounds)</div>
+                <div class="color-box accent-box"><strong>Accent Color:</strong> #2c0066 (Used for Section Headings and borders)
+                </div>
+                <div class="color-box bg-box"><strong>Background Light:</strong> #f4eef7 (Used for target audience question card
+                    background fills)</div>
+            </div>
+        </section>
+        
+        <!-- TYPOGRAPHY SECTION -->
+        <section class="siteplan-section">
+            <h2>Typography</h2>
+            <p>We are using a balanced combination of fonts to ensure readability and personality:</p>
+            <ul>
+                <li><span class="font-macondo"><strong>Macondo:</strong></span> Applied exclusively to the main page titles
+                    (like the Hero `h1`) for an elegant, adventurous look.</li>
+                <li><span class="font-comic"><strong>Comic Relief (or system-ui):</strong></span> Applied to the body text,
+                    regular navigation buttons, subtitles, and paragraphs for high accessibility.</li>
+            </ul>
+        </section>
+        
+        <!-- WIREFRAMES SECTION -->
+        <section class="siteplan-section">
+            <h2>Wireframes</h2>
+            <p>Layout blueprints mapping out the design strategy for both screen formats:</p>
+            <div class="cards-container">
+                <div class="question-card text-center">
+                    <h3>Mobile Viewport Wireframe</h3>
+                    <p>Single-column layout optimized for stacking cards and vertical scrolling on phones.</p>
+                </div>
+                <div class="question-card text-center">
+                    <h3>Desktop/Large Viewport Wireframe</h3>
+                    <p>Multi-column Flexbox setup distributing content rows side-by-side on wide screens.</p>
+                </div>
+            </div>
+        </section>
 
         <!-- SCENARIOS SECTION -->
         <section class="scenarios">
@@ -64,6 +108,8 @@
                 </div>
             </div>
         </section>
+
+        
     </main>
 
     <footer>
