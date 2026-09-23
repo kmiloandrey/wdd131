@@ -146,3 +146,21 @@ footer p {
 .footer-divider::before {
     content: " ❖ ";
 }
+
+@media screen and (min-width: 600px) {
+    body {
+        padding: 40px 20px;
+        /* Gives more breathing room on desktops */
+    }
+
+    main,
+    footer {
+        max-width: 600px;
+        /* Layout expands nicely on wider screens */
+    }
+
+    form {
+        padding: 30px;
+        /* Increases inner form spacing for cleaner grid feel */
+    }
+}
