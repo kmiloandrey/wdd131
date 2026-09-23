@@ -20,7 +20,6 @@ if (selectElement) {
     products.forEach(product => {
         const option = document.createElement("option");
         option.value = product.id;
-        // Capitalize the first letter of each word for a polished UI look
         option.textContent = product.name.split(' ')
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' ');
