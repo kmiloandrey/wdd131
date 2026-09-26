@@ -1,0 +1,136 @@
+:root {
+    --primary-color: #192980;
+    --bg-container: #f5f6f9;
+    --text-color: black;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f9f9f9;
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    max-width: 480px;
+    background-color: var(--bg-container);
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+.form-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.container {
+    padding: 30px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.success-message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.sub-message {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin: 0 0 25px 0;
+}
+
+/* Styled counter card */
+.review-count-box {
+    width: 100%;
+    max-width: 280px;
+    background-color: #e0e4f5;
+    border-left: 5px solid var(--primary-color);
+    padding: 15px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+}
+
+.review-count-box p {
+    margin: 0 0 5px 0;
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-color);
+}
+
+#review-counter {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+/* Styled Action Link Button */
+.back-link {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.back-link:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Footer layout elements */
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.footer-divider::before {
+    content: " ❖ ";
+}
+
+/* Responsive breakpoint scaling */
+@media screen and (min-width: 600px) {
+    body {
+        padding: 40px 20px;
+    }
+
+    main,
+    footer {
+        max-width: 600px;
+    }
+
+    .container {
+        padding: 40px;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted</title>
+    <meta name="description" content="Confirmation page for the Product Review activity.">
+    <meta name="author" content="Camilo Valdivieso">
+    <!-- Font links matching with primary form page -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Macondo&family=Roboto:ital,wght@0,100..900;1,100..900&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/review.css">
+    <script src="scripts/review.js" defer></script>
+</head>
+
+<body>
+
+    <main>
+        <header class="form-header">
+            <h1>Thank You!</h1>
+        </header>
+
+        <div class="container">
+            <p class="success-message">Your review has been successfully posted.</p>
+            <p class="sub-message">We appreciate your feedback to help us improve our products.</p>
+
+            <!-- Review count box -->
+            <div class="review-count-box">
+                <p>Total Reviews Submitted</p>
+                <span id="review-counter">0</span>
+            </div>
+
+            <a href="form.html" class="back-link">Review Another Product</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> <span class="footer-divider">Camilo Valdivieso</span> <span
+                class="footer-divider">Utah</span></p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>
