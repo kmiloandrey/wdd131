@@ -1,10 +1,7 @@
-document.getElementById("currentyear").innerHTML = new Date().getFullYear();
-
 /* last modified time for footer */
+document.getElementById("currentyear").innerHTML = new Date().getFullYear();
 document.getElementById("lastModified").innerHTML = `Last Modified: ${document.lastModified}`;
 
-/* Utah Outdoor Activities Core Web Application Engine
- */
 
 /* Array Data Objects (Meets Objects, Arrays, and Array Methods rule) */
 const activitiesData = [
@@ -38,7 +35,6 @@ function setupMobileNavigation() {
     if (menuButton && primaryNav) {
         menuButton.addEventListener("click", () => {
             primaryNav.classList.toggle("open");
-            /* Conditional branching statement to improve accessibility*/
             menuButton.innerHTML = primaryNav.classList.contains("open") ? "&#10005;" : "&#9776;";
         });
     }
@@ -49,10 +45,10 @@ function renderAdventureCards(filteredItems) {
     const gridContainer = document.getElementById("adventureGrid");
     if (!gridContainer) return;
 
-    // Strict clean sweep before insertion
+    /* Strict clean sweep before insertion */
     gridContainer.innerHTML = "";
 
-    // Array Iteration generating template string cards with native progressive rendering controls
+    /* Array Iteration generating template string cards with native progressive rendering controls */
     filteredItems.forEach(item => {
         const cardHTML = `
             <div class="question-card adventure-card">
