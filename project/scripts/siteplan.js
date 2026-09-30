@@ -1,4 +1,3 @@
-/* year for footer */
 document.getElementById("currentyear").innerHTML = new Date().getFullYear();
 
 /* last modified time for footer */
@@ -9,10 +8,10 @@ document.getElementById("lastModified").innerHTML = `Last Modified: ${document.l
 
 /* Array Data Objects (Meets Objects, Arrays, and Array Methods rule) */
 const activitiesData = [
-    { id: 1, title: "Moab Sunset Exploration", category: "family", desc: "A smooth, paved walk perfect for strollers and all family ages with scenic sunset red rock views." },
-    { id: 2, title: "Zion Backcountry Trekking", category: "thrill", desc: "Challenging steep drops, chains for safety, and an adrenaline pumping reward over Angels Landing." },
-    { id: 3, title: "Wasatch Alpine Climbing", category: "thrill", desc: "High elevation trail scale testing raw stamina and climbing endurance through jagged peak structures." },
-    { id: 4, title: "Goblin Valley Scavenger Hunt", category: "family", desc: "Enchanting labyrinth formations ideal for children discovering natural hoodoo mazes safely." }
+    { id: 1, title: "Moab Sunset Exploration", category: "family", imgSrc: "images/moab.webp", desc: "A smooth, paved walk perfect for strollers and all family ages with scenic sunset red rock views." },
+    { id: 2, title: "Zion Backcountry Trekking", category: "thrill", imgSrc: "images/zion.webp", desc: "Challenging steep drops, chains for safety, and an adrenaline pumping reward over Angels Landing." },
+    { id: 3, title: "Wasatch Alpine Climbing", category: "thrill", imgSrc: "images/wasatch.webp", desc: "High elevation trail scale testing raw stamina and climbing endurance through jagged peak structures." },
+    { id: 4, title: "Goblin Valley Scavenger Hunt", category: "family", imgSrc: "images/goblin.webp", desc: "Enchanting labyrinth formations ideal for children discovering natural hoodoo mazes safely." }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -45,20 +44,23 @@ function setupMobileNavigation() {
     }
 }
 
-/* Core Data Processing Engine: Renders filtered elements via Template Literals */
+/* Core Data Processing Engine: Renders elements dynamically with progressive lazy-loaded images */
 function renderAdventureCards(filteredItems) {
     const gridContainer = document.getElementById("adventureGrid");
     if (!gridContainer) return;
 
-    /* Strict clean sweep before insertion */
+    // Strict clean sweep before insertion
     gridContainer.innerHTML = "";
 
-    /* Array Iteration Map method generating template string items */
+    // Array Iteration generating template string cards with native progressive rendering controls
     filteredItems.forEach(item => {
         const cardHTML = `
-            <div class="question-card">
-                <h3>${item.title}</h3>
-                <p>${item.desc}</p>
+            <div class="question-card adventure-card">
+                <img src="${item.imgSrc}" alt="${item.title}" class="adventure-card-img" loading="lazy" width="450" height="250">
+                <div class="adventure-card-content">
+                    <h3>${item.title}</h3>
+                    <p>${item.desc}</p>
+                </div>
             </div>
         `;
         gridContainer.innerHTML += cardHTML;
