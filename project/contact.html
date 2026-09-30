@@ -28,41 +28,52 @@
         <button id="menuButton" aria-label="Toggle Menu">&#9776;</button>
         <nav id="primaryNav">
             <ul>
-                <li><a href="siteplan.html" class="active">Home</a></li>
+                <li><a href="siteplan.html">Home</a></li>
                 <li><a href="adventures.html">Adventures</a></li>
-                <li><a href="contact.html">Book a Trip</a></li>
+                <li><a href="contact.html" class="active">Book a Trip</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- HERO SECTION -->
-        <div class="hero-container">
-            <img src="images/moab_sunset.webp" alt="Moab Sunset" class="hero-bg" width="1000" height="500">
-            <div class="hero-title-box">
-                <h1>Utah Outdoor Activities</h1>
-            </div>
-            <article class="hero-banner">
-                <p>Our goal is that you find the best experience ever!</p>
-                <img src="images/family.hiking.webp" alt="Family Hiking" class="hero-thumb" loading="lazy" width="140"
-                    height="90">
-            </article>
-        </div>
+        <section class="form-container">
+            <h2>Adventure Booking Request</h2>
+            <p>Fill out the form below and save your layout preferences locally.</p>
 
-        <!-- SCENARIOS SECTION -->
-        <section class="scenarios">
-            <h2>Planning Your Utah Adventure?</h2>
-            <p>Find the answers to our visitors' most common questions:</p>
-            <div class="cards-container">
-                <div class="question-card">
-                    <h3>Looking for family fun?</h3>
-                    <p>Learn about kid-friendly hikes and permit secrets for Utah's National Parks.</p>
-                </div>
-                <div class="question-card">
-                    <h3>Seeking a weekend thrill?</h3>
-                    <p>Discover local mountain hiking trails and expert gear guides.</p>
-                </div>
-            </div>
+            <form id="bookingForm" action="#" method="get">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label>Full Name *
+                        <input type="text" id="fullName" name="fullName" required placeholder="Camilo Chinchilla">
+                    </label>
+                    <label>Email Address *
+                        <input type="email" id="email" name="email" required placeholder="username@example.com">
+                    </label>
+                    <label>Phone Number *
+                        <input type="tel" id="phone" name="phone" required placeholder="(123)1234567">
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Trip Preferences</legend>
+                    <label>Adventure Package
+                        <select id="packageSelect" name="package">
+                            <option value="moab">Moab Sunset Exploration</option>
+                            <option value="zion">Zion Backcountry Trekking</option>
+                            <option value="wasatch">Wasatch Alpine Climbing</option>
+                        </select>
+                    </label>
+                    <label>Special Instructions
+                        <textarea id="comments" name="comments" rows="4"
+                            placeholder="Any dietary needs or gear requests?"></textarea>
+                    </label>
+                </fieldset>
+
+                <button type="submit" class="submit-btn">Submit Booking Request</button>
+            </form>
+
+            <!-- Dynamic LocalStorage Response Box -->
+            <div id="formResponse" class="response-hidden"></div>
         </section>
     </main>
 

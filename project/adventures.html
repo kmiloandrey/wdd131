@@ -28,44 +28,31 @@
         <button id="menuButton" aria-label="Toggle Menu">&#9776;</button>
         <nav id="primaryNav">
             <ul>
-                <li><a href="siteplan.html" class="active">Home</a></li>
-                <li><a href="adventures.html">Adventures</a></li>
+                <li><a href="siteplan.html">Home</a></li>
+                <li><a href="adventures.html" class="active">Adventures</a></li>
                 <li><a href="contact.html">Book a Trip</a></li>
             </ul>
         </nav>
     </header>
-
+    
     <main>
-        <!-- HERO SECTION -->
-        <div class="hero-container">
-            <img src="images/moab_sunset.webp" alt="Moab Sunset" class="hero-bg" width="1000" height="500">
-            <div class="hero-title-box">
-                <h1>Utah Outdoor Activities</h1>
-            </div>
-            <article class="hero-banner">
-                <p>Our goal is that you find the best experience ever!</p>
-                <img src="images/family.hiking.webp" alt="Family Hiking" class="hero-thumb" loading="lazy" width="140"
-                    height="90">
-            </article>
-        </div>
 
-        <!-- SCENARIOS SECTION -->
-        <section class="scenarios">
-            <h2>Planning Your Utah Adventure?</h2>
-            <p>Find the answers to our visitors' most common questions:</p>
-            <div class="cards-container">
-                <div class="question-card">
-                    <h3>Looking for family fun?</h3>
-                    <p>Learn about kid-friendly hikes and permit secrets for Utah's National Parks.</p>
-                </div>
-                <div class="question-card">
-                    <h3>Seeking a weekend thrill?</h3>
-                    <p>Discover local mountain hiking trails and expert gear guides.</p>
-                </div>
+        <section class="adventure-explorer">
+            <h2>Explore Utah Activities</h2>
+            <p>Filter through curated activities based on your goals:</p>
+    
+            <div class="filter-controls">
+                <button class="filter-btn active" data-category="all">Show All</button>
+                <button class="filter-btn" data-category="family">Family Friendly</button>
+                <button class="filter-btn" data-category="thrill">High Thrill</button>
+            </div>
+    
+            <div id="adventureGrid" class="cards-container">
+                <!-- Dynamically generated using JavaScript Array Methods & Template Literals -->
             </div>
         </section>
     </main>
-
+    
     <footer>
         <p>
             <span class="footer-divider">&copy; <span id="currentyear"></span></span>
