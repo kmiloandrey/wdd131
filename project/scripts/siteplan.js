@@ -3,7 +3,7 @@ document.getElementById("currentyear").innerHTML = new Date().getFullYear();
 document.getElementById("lastModified").innerHTML = `Last Modified: ${document.lastModified}`;
 
 
-/* Array Data Objects (Meets Objects, Arrays, and Array Methods rule) */
+/* Array Data Objects */
 const activitiesData = [
     { id: 1, title: "Moab Sunset Exploration", category: "family", imgSrc: "images/moab.webp", desc: "A smooth, paved walk perfect for strollers and all family ages with scenic sunset red rock views." },
     { id: 2, title: "Zion Angels Landing", category: "thrill", imgSrc: "images/zion.webp", desc: "Challenging steep drops, chains for safety, and an adrenaline pumping reward over Angels Landing." },
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /* Invoke foundational utilities */
     setupMobileNavigation();
 
-    /* Conditional setup based on page structure */
+    /* Conditional setup */
     if (document.getElementById("adventureGrid")) {
         renderAdventureCards(activitiesData);
         setupFilterListeners();
@@ -40,15 +40,15 @@ function setupMobileNavigation() {
     }
 }
 
-/* Core Data Processing Engine: Renders elements dynamically with progressive lazy-loaded images */
+
 function renderAdventureCards(filteredItems) {
     const gridContainer = document.getElementById("adventureGrid");
     if (!gridContainer) return;
 
-    /* Strict clean sweep before insertion */
+    /* clean sweep before insertion */
     gridContainer.innerHTML = "";
 
-    /* Array Iteration generating template string cards with native progressive rendering controls */
+    /* Array Iteration generating template string cards */
     filteredItems.forEach(item => {
         const cardHTML = `
             <div class="question-card adventure-card">
@@ -69,13 +69,12 @@ function setupFilterListeners() {
 
     filterButtons.forEach(btn => {
         btn.addEventListener("click", (e) => {
-            /* Manage UI Active Selection State */
+            
             document.querySelector(".filter-btn.active")?.classList.remove("active");
             e.target.classList.add("active");
 
             const targetedCategory = e.target.getAttribute("data-category");
 
-            /* Conditional branching combined with Array methods (.filter) */
             if (targetedCategory === "all") {
                 renderAdventureCards(activitiesData);
             } else {
@@ -86,7 +85,7 @@ function setupFilterListeners() {
     });
 }
 
-/* Form Handling & LocalStorage Synchronizer */
+/* Form Handling & LocalStorage */
 function setupFormHandling() {
     const form = document.getElementById("bookingForm");
     const responseBox = document.getElementById("formResponse");
@@ -100,7 +99,7 @@ function setupFormHandling() {
         const clientEmail = document.getElementById("email").value;
         const selectedPackage = document.getElementById("packageSelect").value;
 
-        /* Bundle elements using an Object structure */
+        /* Bundle elements */
         const submissionProfile = {
             name: clientName,
             email: clientEmail,
@@ -117,7 +116,7 @@ function setupFormHandling() {
                 <h3>Thank you, ${submissionProfile.name}!</h3>
                 <p>Your booking choice for the <strong>${submissionProfile.package.toUpperCase()}</strong> package has been saved locally on ${submissionProfile.timestamp}. Our wilderness experts will connect with you via ${submissionProfile.email} soon.</p>
             `;
-            responseBox.className = ""; /* Reveal response layout node removing hidden state class */
+            responseBox.className = ""; /* Reveal response */
             form.reset();
         }
     });
