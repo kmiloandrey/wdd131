@@ -6,9 +6,9 @@ document.getElementById("lastModified").innerHTML = `Last Modified: ${document.l
 /* Array Data Objects (Meets Objects, Arrays, and Array Methods rule) */
 const activitiesData = [
     { id: 1, title: "Moab Sunset Exploration", category: "family", imgSrc: "images/moab.webp", desc: "A smooth, paved walk perfect for strollers and all family ages with scenic sunset red rock views." },
-    { id: 2, title: "Zion Backcountry Trekking", category: "thrill", imgSrc: "images/zion.webp", desc: "Challenging steep drops, chains for safety, and an adrenaline pumping reward over Angels Landing." },
+    { id: 2, title: "Zion Angels Landing", category: "thrill", imgSrc: "images/zion.webp", desc: "Challenging steep drops, chains for safety, and an adrenaline pumping reward over Angels Landing." },
     { id: 3, title: "Wasatch Alpine Climbing", category: "thrill", imgSrc: "images/wasatch.webp", desc: "High elevation trail scale testing raw stamina and climbing endurance through jagged peak structures." },
-    { id: 4, title: "Goblin Valley Scavenger Hunt", category: "family", imgSrc: "images/goblin.webp", desc: "Enchanting labyrinth formations ideal for children discovering natural hoodoo mazes safely." }
+    { id: 4, title: "Goblin Valley Hikes", category: "family", imgSrc: "images/goblin.webp", desc: "Enchanting labyrinth formations ideal for children discovering natural hoodoo mazes safely." }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
