@@ -149,7 +149,7 @@ main {
     text-align: center;
 }
 
-h2 {
+h1 {
     font-family: var(--font-titles);
     color: var(--text-accent);
     margin-bottom: 0.5rem;
